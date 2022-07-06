@@ -255,7 +255,7 @@ end
 
 assign position = (position_X <<< 6) + position_Y;
 
-// Construct the 9*9 mask
+// Construct the 3*3 mask
 assign position_0 = position_4 - 65;
 assign position_1 = position_4 - 64;
 assign position_2 = position_4 - 63;
@@ -305,7 +305,7 @@ always @(posedge clk or posedge reset) begin
       end
 end
 
-// Address of the 9*9 mask
+// Address of the 3*3 mask
 always @(posedge clk or posedge reset) begin
       if(reset) begin
        iaddr <= 0;
